@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 // Constants
 import { LEAGUE_COUNTRY_LIST } from '../../constants/constraints';
 
@@ -12,15 +11,7 @@ export class LeagueCountryComponent implements OnInit, OnDestroy {
   leagueCountryList = LEAGUE_COUNTRY_LIST;
   selectedTab: string = '';
 
-  constructor(
-    private readonly router: Router
-  ) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
-      }
-    });
-  }
+  constructor() {}
 
   ngOnInit(): void {
     localStorage.clear();
