@@ -1,0 +1,10 @@
+<div class="heading">Football Updates</div>
+<div class="league-country-list">
+    <div *ngFor="let leagueCountry of leagueCountryList;" class="league-country" (click)="selectTab(leagueCountry.value)">
+        <a [id]="leagueCountry.value + 'Select'"
+            [routerLink]="['/league-standings', leagueCountry.id]" routerLinkActive="active">
+            {{leagueCountry.value | titlecase}}
+        </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

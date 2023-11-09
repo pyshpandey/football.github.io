@@ -1,0 +1,35 @@
+<div *ngIf="!isLoading">
+    <table class="league-standings-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Name</th>
+                <th>Games</th>
+                <th>W</th>
+                <th>L</th>
+                <th>D</th>
+                <th>Goal Difference</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let leagueStanding of countryLeagueStandings;">
+                <td>{{ leagueStanding.rank }}</td>
+                <td><img [src]="leagueStanding.team.logo" width="50" height="50" /></td>
+                <td class="league-team-name" (click)="navigateToTeamFixtues(leagueStanding.team.id)">{{
+                    leagueStanding.team.name }}</td>
+                <td>{{ leagueStanding.all.played }}</td>
+                <td>{{ leagueStanding.all.win }}</td>
+                <td>{{ leagueStanding.all.lose }}</td>
+                <td>{{ leagueStanding.all.draw }}</td>
+                <td>{{ leagueStanding.goalsDiff }}</td>
+                <td>{{ leagueStanding.points }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="isLoading" class="loader">
+    Loading ....
+</div>

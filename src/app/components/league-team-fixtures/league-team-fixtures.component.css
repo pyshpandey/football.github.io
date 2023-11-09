@@ -1,0 +1,24 @@
+.league-team-fixtures-table {
+    margin: 0 auto;
+}
+.league-team-fixtures-table th,
+.league-team-fixtures-table td {
+    text-align: center;
+    padding: 10px;
+}
+.back-button {
+    width: 150px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    float: left;
+    margin-left: 450px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

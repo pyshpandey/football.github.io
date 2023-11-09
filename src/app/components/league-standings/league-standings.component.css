@@ -1,0 +1,11 @@
+.league-standings-table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+.league-standings-table th,
+.league-standings-table td {
+    padding: 10px;
+}
+.league-team-name:hover {
+    cursor: pointer;
+}

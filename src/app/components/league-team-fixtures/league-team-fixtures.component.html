@@ -1,0 +1,20 @@
+<div *ngIf="!isLoading">
+    <table class="league-team-fixtures-table">
+        <tbody>
+            <tr *ngFor="let leagueTeamFixtures of leagueTeamFixturesData;">
+                <td><img [src]="leagueTeamFixtures.teams.home.logo" width="50" height="50" /></td>
+                <td>{{leagueTeamFixtures.teams.home.name}}</td>
+                <td>{{leagueTeamFixtures.goals.home}}</td>
+                <td> - </td>
+                <td>{{leagueTeamFixtures.goals.away}}</td>
+                <td>{{leagueTeamFixtures.teams.away.name}}</td>
+                <td><img [src]="leagueTeamFixtures.teams.away.logo" width="50" height="50" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="back-button" (click)="goBack()">Back</button>
+</div>
+
+<div *ngIf="isLoading" class="loader">
+    Loading ....
+</div>
